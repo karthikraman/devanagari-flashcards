@@ -1,0 +1,144 @@
+body {
+  font-family: Lato, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.flashcard {
+  margin: 20px;
+  padding: 20px;
+  width: 320px;
+  height: 200px;
+  border: 2px solid #ddd;
+  display: inline-block;
+  background-color: #f9f9f9;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.flashcard .answer-section, 
+.flashcard .context-section {
+  padding: 10px;
+  text-align: left;
+}
+
+#correct-answer, #context {
+  text-align: center;  
+  margin: 0;           
+  padding: 10px;       
+}
+
+.flashcard .context-section {
+  margin-top: 5px;
+}
+
+.front{
+  display: flex;
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  width: 120px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+button.next {
+  background-color: #2196f3;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.status {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 25px;  /* Reserve space for the message */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status.success {
+  color: green;
+}
+
+.status.error {
+  color: red;
+}
+
+.status.hidden {
+  visibility: hidden;  /* Instead of display: none, hide the message visually but keep space reserved */
+}
+
+#stats {
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+}
+
+#stats div {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 120px;
+  font-weight: bold;
+}
+
+#score {
+  background-color: #4caf50; /* Green for Score */
+  color: white;
+}
+
+#correct {
+  background-color: #2196f3; /* Blue for Correct */
+  color: white;
+}
+
+#incorrect {
+  background-color: #f44336; /* Red for Incorrect */
+  color: white;
+}
+
+#streak {
+  background-color: #ff9800; /* Orange for Streak */
+  color: white;
+}
+
+/* Add hover effects for interactivity */
+#stats div:hover {
+  opacity: 0.8;
+}
